@@ -1,0 +1,24 @@
+<h1>Post#index</h1>
+<p>Find me in app/views/post/index.html.erb</p>
+<h2>모든 게시물 보기</h2>
+<a href="/post/new">게시물 작성</a>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">제목</th>
+      <th scope="col">내용</th>
+      <th scope="col">조회수</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @all_post.each do |post| %> 
+    <tr>
+      <th scope="row"><%=post.id%></th>
+      <td><a href="/post/read/<%=post.id%>"><%=post.title%></a></td>
+      <td><%=post.content%></td>
+      <td><%=post.view%></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Talings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @talings.each do |taling| %>
+      <tr>
+        <td><%= taling.title %></td>
+        <td><%= taling.content %></td>
+        <td><%= link_to 'Show', taling %></td>
+        <td><%= link_to 'Edit', edit_taling_path(taling) %></td>
+        <td><%= link_to 'Destroy', taling, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Taling', new_taling_path %>

@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @taling.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @taling.content %>
+</p>
+
+<%= link_to 'Edit', edit_taling_path(@taling) %> |
+<%= link_to 'Back', talings_path %>

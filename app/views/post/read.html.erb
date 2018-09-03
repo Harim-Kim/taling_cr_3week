@@ -1,0 +1,8 @@
+<h1>Post#read</h1>
+<p>Find me in app/views/post/read.html.erb</p>
+<div class="container">
+    <p style="font-size:30px">제목: <%=@one_post.title %></p>
+    <hr>
+    <p>내용: <span style="float:right">조회수: <%=@one_post.view%></span></p>
+    <%= @one_post.content %>
+</div>
